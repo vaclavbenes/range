@@ -1,4 +1,4 @@
-type Range = number | string;
+export type Range = number | string;
 
 interface _Iterable extends Iterable<{}> {
   length: number;
@@ -17,7 +17,7 @@ class _Array<T> extends Array<T> {
   ): Range[] | undefined {
     if (typeof from === "number" && typeof to === "number") {
       return Array.from(
-        (<_Iterable> { length: Math.floor((to - from) / step) + 1 }),
+        (<_Iterable>{ length: Math.floor((to - from) / step) + 1 }),
         (v, k) => from + k * step,
       );
     } else if (typeof to === "string" && typeof from === "string") {
