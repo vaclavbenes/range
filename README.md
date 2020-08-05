@@ -4,9 +4,13 @@
 range(from:string|number, to:string|number,step:number)
 `
 
+import to module
+
 ```ts
-const {range} from range.ts
+import { range } from "https://raw.githubusercontent.com/vaclavbenes/range/master/range.ts";
+
 ```
+
 
 ```ts
 range(1,10) // [1,2,3,4,5,6,7,8,9,10]
